@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOBALVET PHARMA - Animal Feed Supplier</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .lang-btns {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .lang-btn {
+            margin: 0 5px;
+            padding: 7px 18px;
+            border: none;
+            border-radius: 20px;
+            background: #eee;
+            cursor: pointer;
+            font-weight: 600;
+            color: #136a8a;
+            font-size: 1em;
+            transition: background 0.2s, color 0.2s;
+        }
+        .lang-btn.active {
+            background: #136a8a;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-placeholder">
+            <span>LOGO</span>
+        </div>
+        <h1>GLOBALVET PHARMA</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>उच्च दर्जाचे पशुखाद्य, उत्तम पशुधन</h2>
+            <!-- Language Switch Buttons -->
+            <div class="lang-btns">
+                <button class="lang-btn active" id="marathiBtn">मराठी</button>
+                <button class="lang-btn" id="englishBtn">English</button>
+            </div>
+            <!-- Marathi About Us -->
+            <div class="about-section about-marathi" id="aboutMarathi">
+                <h3>आमच्या बद्दल</h3>
+                <p>
+                    GLOBALVET PHARMA मध्ये, आम्ही शेतकरी व पशुपालकांना उच्च-गुणवत्तेच्या पशुखाद्य उत्पादने पुरवण्यावर विश्वास ठेवतो.<br>
+                    दर्जेदार पशुखाद्याचा वापर केल्याने प्राण्यांचे आरोग्य सुधारते, उत्पादनक्षमता वाढते, तसेच दूध, मांस व अंड्यांची गुणवत्ता वाढते.
+                </p>
+                <ul>
+                    <li>प्राण्यांची वाढ आणि रोगप्रतिकारक शक्ती सुधारते</li>
+                    <li>उत्पादनक्षमता व उत्पन्न वाढवते</li>
+                    <li>पचनक्रिया व आरोग्य उत्तम राहते</li>
+                    <li>संतुलित पोषण मिळते</li>
+                </ul>
+            </div>
+            <!-- English About Us -->
+            <div class="about-section about-english" id="aboutEnglish" style="display:none;">
+                <h3>About Us</h3>
+                <p>
+                    At GLOBALVET PHARMA, we believe in providing farmers and livestock owners with high-quality animal feed products.<br>
+                    Using quality feed improves animal health, increases productivity, and enhances the quality of milk, meat, and eggs.
+                </p>
+                <ul>
+                    <li>Improves animal growth and immunity</li>
+                    <li>Enhances productivity and yield</li>
+                    <li>Promotes better digestion and health</li>
+                    <li>Ensures balanced nutrition</li>
+                </ul>
+            </div>
+            <a href="#order" class="order-btn">ऑनलाईन ऑर्डर करा / Order Online</a>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <h2>ऑर्डर करा / Place Your Order</h2>
+        <form action="https://formspree.io/f/maylkwyb" method="POST" class="order-form">
+            <input type="text" name="name" placeholder="तुमचं नाव / Your Name" required>
+            <input type="tel" name="phone" placeholder="फोन नंबर / Phone Number" required>
+            <input type="email" name="email" placeholder="ईमेल पत्ता / Email Address" required>
+            <textarea name="orderDetails" placeholder="ऑर्डरचे तपशील (उत्पादन, प्रमाण, इ.) / Order Details (Product, Quantity, etc.)" required></textarea>
+            <button type="submit">ऑर्डर सबमिट करा / Submit Order</button>
+        </form>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>संपर्क करा / Contact Us</h2>
+        <div class="contact-info">
+            <p><strong>पत्ता / Address:</strong> Ramanandnagar, Kirloskarvadi, Maharashtra - 416308</p>
+            <p><strong>फोन / Phone:</strong> <a href="tel:+918788030337">+91 8788030337</a></p>
+            <p>
+                <a href="https://wa.me/918788030337" class="whatsapp-btn" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20"> WhatsApp वर चॅट करा / Chat on WhatsApp
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 GLOBALVET PHARMA. सर्व हक्क राखीव. All rights reserved.
+    </footer>
+
+    <script>
+        const marathiBtn = document.getElementById('marathiBtn');
+        const englishBtn = document.getElementById('englishBtn');
+        const aboutMarathi = document.getElementById('aboutMarathi');
+        const aboutEnglish = document.getElementById('aboutEnglish');
+
+        marathiBtn.addEventListener('click', function() {
+            marathiBtn.classList.add('active');
+            englishBtn.classList.remove('active');
+            aboutMarathi.style.display = 'block';
+            aboutEnglish.style.display = 'none';
+        });
+
+        englishBtn.addEventListener('click', function() {
+            englishBtn.classList.add('active');
+            marathiBtn.classList.remove('active');
+            aboutMarathi.style.display = 'none';
+            aboutEnglish.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

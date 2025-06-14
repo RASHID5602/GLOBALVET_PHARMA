@@ -1,0 +1,219 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(90deg, #136a8a, #267871);
+    color: white;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.logo-placeholder {
+    width: 60px;
+    height: 60px;
+    background: #eee;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #136a8a;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+}
+
+header h1 {
+    margin: 10px 0 0 0;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    font-family: 'Georgia', serif;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.2s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(19,106,138, 0.55);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.hero ul {
+    text-align: left;
+    max-width: 400px;
+    margin: 20px auto;
+    padding-left: 20px;
+}
+
+.order-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #267871;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(38,120,113,0.2);
+    transition: background 0.2s;
+}
+
+.order-btn:hover {
+    background: #136a8a;
+}
+
+.order-section {
+    background: #fff;
+    padding: 50px 20px 30px 20px;
+    text-align: center;
+}
+
+.order-section h2 {
+    color: #136a8a;
+    margin-bottom: 25px;
+}
+
+.order-form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-form input, .order-form textarea {
+    padding: 12px;
+    border: 1px solid #136a8a33;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #f9f9f9;
+    resize: none;
+}
+
+.order-form button {
+    background: #267871;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.order-form button:hover {
+    background: #136a8a;
+}
+
+.contact-section {
+    background: #eef6f8;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #136a8a;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    margin: auto;
+    max-width: 380px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px 20px;
+    box-shadow: 0 1px 6px rgba(19,106,138,0.09);
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: #267871;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366;
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 1em;
+    transition: background 0.2s;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+}
+
+footer {
+    background: #136a8a;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1em;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .hero-content, .order-form, .contact-info {
+        padding: 15px 5px;
+        font-size: 1em;
+    }
+    .order-section, .contact-section {
+        padding: 30px 5px;
+    }
+    header h1 {
+        font-size: 1.2em;
+    }
+}
